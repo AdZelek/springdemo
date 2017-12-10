@@ -2,6 +2,7 @@ package com.example.springdemo.service;
 
 import static org.junit.Assert.*;
 
+//import com.example.springdemo.domain.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,13 @@ public class PersonManagerTest {
 	@Autowired
 	private PersonManager pm;
 
+
 	@Test
 	public void sayHelloTest() {
+		
 		assertEquals("I'm Zosia!", pm.sayName());
+		System.out.println(pm.sayNamesFamily());
+		
 	}
 
 }

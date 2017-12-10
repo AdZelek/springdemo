@@ -9,30 +9,37 @@
 		configure as beans -->
 	<context:component-scan base-package="com.example.springdemo.service" />
 
-<bean id="ania" class="com.example.springdemo.domain.Person">
-		<property name="firstName" value="Ania" />
-		<property name="yob" value="1987" />
-</bean>
-
-	<bean id="zosia" class="com.example.springdemo.domain.Person">
+	<bean id="dziecko" class="com.example.springdemo.domain.Person">
 		<property name="firstName" value="Zosia" />
-		<property name="yob" value="1987" />
+		<property name="yob" value="1994" />
 	</bean>
 	
-	<bean id="jan" class="com.example.springdemo.domain.Person">
-		<property name="firstName" value="Jan" />
-		<property name="yob" value="1987" />
+ 	<bean id="mama" class="com.example.springdemo.domain.Person">
+		<property name="firstName" value="Anna"/>
+		<property name="yob" value="1970" />
 	</bean>
 	
-		<bean id="teresa" class="com.example.springdemo.domain.Person">
-		<property name="firstName" value="Teresa" />
-		<property name="yob" value="1987" />
+	<bean id="tata" class="com.example.springdemo.domain.Person">
+		<property name="firstName" value="Jan"></property>
+		<property name="yob" value="1970"></property>		
 	</bean>
 	
-		<bean id="kazimierz" class="com.example.springdemo.domain.Person">
-		<property name="firstName" value="Kazimierz" />
-		<property name="yob" value="1987" />
+	<bean id="babcia"  class="com.example.springdemo.domain.Person">
+		<property name="firstName" value="Eugenia"/>
+		<property name="yob" value="1950"/>
 	</bean>
 	
+	<bean id="dziadek" class="com.example.springdemo.domain.Person">
+		<property name="firstName" value="Konstanty"></property>
+		<property name="yob" value="1941"></property>
+	</bean> 
+	
+	<bean id="family" class="com.example.springdemo.domain.Family">
+		<constructor-arg ref="mama"/>
+		<constructor-arg ref="tata"/>
+		<constructor-arg ref="babcia"/>
+		<constructor-arg ref="dziadek"/>
+		<constructor-arg ref="dziecko"/>
+	</bean>
 
 </beans>

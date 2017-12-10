@@ -3,6 +3,7 @@ target/
 .settings/
 .classpath
 .project
+.iml
 
 # Package Files #
 *.jar
